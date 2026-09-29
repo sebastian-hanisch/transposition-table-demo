@@ -1,5 +1,7 @@
 # Transpositionstabelle: dieselbe Stellung nur einmal lösen
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-transposition-table-demo.streamlit.app/)**
+
 Kind-Stück von **[alpha-beta-demo](https://github.com/sebastian-hanisch/alpha-beta-demo)** (selbst Kind von
 **[minimax-demo](https://github.com/sebastian-hanisch/minimax-demo)**, Wurzel der Adversarische-Suche-Linie).
 Vehikel: dasselbe Mini-Vier-Gewinnt, dasselbe Brettmodell (`tt_game.py` ist eine wortgleiche Kopie von
