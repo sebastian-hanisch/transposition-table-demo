@@ -32,8 +32,8 @@ st.title("🗂️ Transpositionstabelle: dieselbe Stellung nur einmal lösen")
 st.markdown(
     """
     Der Spielbaum aus dem Elternstück (Alpha-Beta) ist eigentlich gar kein Baum: dieselbe Stellung lässt
-    sich oft über **verschiedene Zugfolgen** erreichen (Spalte A dann B ergibt dasselbe Brett wie B dann A,
-    solange sich beide Züge nicht überschneiden). Eine **Transpositionstabelle** erkennt das per
+    sich oft über **verschiedene Zugfolgen** erreichen (setzen beide Spieler dieselben Steine in dieselben Spalten, nur in anderer
+    Reihenfolge, entsteht dasselbe Brett - solange in jeder Spalte die Farbfolge von unten nach oben gleich bleibt). Eine **Transpositionstabelle** erkennt das per
     **Zobrist-Hashing** und löst jede Stellung nur **einmal** – ein generelles Memoisierungs-Muster, wie
     ein Cache-Dict in einer dynamischen Programmierung. Am Ende der Seite: die 📐 Mathematische
     Formulierung.
