@@ -26,7 +26,7 @@ gefundenen Wert und ob er exakt oder nur eine Schranke ist speichert (Alpha-Beta
 Kein Tiefen-Tracking wie in echten Engines nötig: diese Demo löst immer bis zum Spielende durch (kein
 Zeitlimit, keine Tiefenbegrenzung) – ein gespeicherter Wert ist deshalb immer der vollständige, endgültige
 Wert der Stellung, nie ein Zwischenstand einer flacheren Suche. Die Tabelle wird pro Suche neu aufgebaut
-(siehe „Ehrliche Grenzen").
+(siehe „Ehrliche Grenzen“).
 
 ## Befunde (gemessen, keine Behauptungen)
 
@@ -58,7 +58,7 @@ ab dem leeren Brett:
   Partie-Engine würde die Tabelle auch nach dem eigenen Zug behalten (weiterer, hier nicht gebauter Gewinn).
 - **Speicher statt Zeit.** Die Tabelle wächst mit der Stellungszahl (auf 4×5 über 300.000 Einträge) – ein
   echter Kompromiss, kein reiner Gewinn.
-- **Auf 4×5 wird „ohne Tabelle" nie live nachgerechnet** (43 s schon für die Startstellung) – dort steht
+- **Auf 4×5 wird „ohne Tabelle“ nie live nachgerechnet** (43 s schon für die Startstellung) – dort steht
   nur der vorab gemessene Startwert, nach einem Zug gibt es ehrlich keinen Live-Vergleichswert mehr
   (echter Bug beim Bau: die App verglich anfangs die aktuelle, bereits reduzierte Knotenzahl fälschlich
   gegen den Startwert-Baseline und zeigte einen irreführenden Faktor – jetzt korrekt nur für die
@@ -71,14 +71,14 @@ ergeben identische Hashes), Suchalgorithmus (Kreuzprobe gegen alpha-beta-demo, m
 Visualisierung, Streamlit-Rauchtests (AppTest: jede Brettgröße, TT-Checkbox auf 4×5 fest verriegelt,
 Permalink-Rundlauf). Drei echte Bugs beim Bau gefunden+gefixt:
 
-1. Der „Wie viel bringt die Tabelle"-Vergleich löste auf 4×5 versehentlich eine LIVE 43-Sekunden-Suche ohne
+1. Der „Wie viel bringt die Tabelle“-Vergleich löste auf 4×5 versehentlich eine LIVE 43-Sekunden-Suche ohne
    Tabelle aus, sobald diese Brettgröße ausgewählt wurde – genau auf dem Brett, das die Demo doch gerade
    nutzbar machen soll. Fix: `without_tt_ok`-Flag pro Brettgröße, die Tabelle bleibt auf 4×5 fest an
    (Checkbox gesperrt), der Vergleich nutzt dort nur den vorab gemessenen Wert.
-2. Ein Tippfehler bei den Anführungszeichen (deutsches „…" gemischt mit geradem ") brach die Python-Syntax
+2. Ein Tippfehler bei den Anführungszeichen (deutsches „…“ gemischt mit geradem ") brach die Python-Syntax
    der App komplett.
 3. Nach einem Zug auf 4×5 verglich die App die bereits reduzierte aktuelle Knotenzahl fälschlich gegen den
-   nur für die LEERE Startstellung gültigen Vorab-Wert – ein irreführender „X-fach weniger"-Faktor ohne
+   nur für die LEERE Startstellung gültigen Vorab-Wert – ein irreführender „X-fach weniger“-Faktor ohne
    Aussagekraft. Fix: dieser Vergleich erscheint jetzt nur noch für die tatsächliche Startstellung.
 
 ## Dateistruktur

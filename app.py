@@ -236,7 +236,7 @@ st.markdown(
     - **Kein Tiefen-Tracking nötig, aber ein echter Verzicht anderswo.** Diese Demo löst immer bis zum
       Spielende durch (kein Zeitlimit) - ein gespeicherter Wert ist deshalb immer vollständig, nie ein
       Zwischenstand. Echte Engines mit Zeitlimit müssen zusätzlich die Such-TIEFE je Tabelleneintrag
-      mitführen (hier bewusst weggelassen, siehe „Bewusst nicht umgesetzt").
+      mitführen (hier bewusst weggelassen, siehe „Bewusst nicht umgesetzt“).
     - **Die Tabelle wird pro Suche neu aufgebaut**, nicht über mehrere Züge hinweg mitgeführt - eine echte
       Partie-Engine würde die Tabelle auch nach dem eigenen Zug behalten (weiterer, hier nicht gebauter
       Gewinn).

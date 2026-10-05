@@ -3,7 +3,7 @@
 `multi_cell(w=0, ...)` lässt den Cursor per Default am RECHTEN statt am linken
 Rand stehen - ohne `new_x=LMARGIN` würde ein zweiter `multi_cell`-Aufruf direkt
 danach abstürzen (bekannter Bug aus minimax-demo, hier von Anfang an korrekt).
-Keine Sonderzeichen wie „…" in PDF-gebundenen Strings (bekannter Bug aus
+Keine Sonderzeichen wie „…“ in PDF-gebundenen Strings (bekannter Bug aus
 alpha-beta-demo: fpdf2s Helvetica-Kernschrift crasht daran).
 """
 
