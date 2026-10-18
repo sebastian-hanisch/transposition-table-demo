@@ -66,7 +66,7 @@ ab dem leeren Brett:
 
 ## Tests
 
-55 Tests (`pytest tests/ -v`): Brettmechanik, Zobrist-Hashing (inkrementell = neu berechnet, Transpositionen
+64 Tests (`pytest tests/ -v`): Brettmechanik, Zobrist-Hashing (inkrementell = neu berechnet, Transpositionen
 ergeben identische Hashes), Suchalgorithmus (Kreuzprobe gegen alpha-beta-demo, mit/ohne Tabelle), PDF-Export,
 Visualisierung, Streamlit-Rauchtests (AppTest: jede Brettgröße, TT-Checkbox auf 4×5 fest verriegelt,
 Permalink-Rundlauf). Drei echte Bugs beim Bau gefunden+gefixt:
